@@ -45,5 +45,6 @@ app.post('/sign', async function (req, res) {
 })
 
 app.get('/', function(req, res) {
+	res.set({ 'Content-Type': 'text/json', 'access-control-allow-origin': '*' })
 	res.send('success');
 })
