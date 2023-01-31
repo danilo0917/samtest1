@@ -1,16 +1,17 @@
 
 const express = require("express");
 require('dotenv').config()
-const port = 5000;
+const port = 3000;
 
 const app = express();
 const https = require('https')
 
 app.listen(process.env.PORT || 3000, () => {
-	console.log(`App start on port ${port}`);
+	console.log(`App start on port ${process.env.PORT || 3000}`);
 });
 
 app.post('/sign', async function (req, res) {
+	console.log('debug here =======>', req.body)
 	res.set({ 'Content-Type': 'text/json', 'access-control-allow-origin': '*' })
 	res.send(req.body);
 	// const postData = req.body;
