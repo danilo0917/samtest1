@@ -1,11 +1,12 @@
 
 const express = require("express");
+require('dotenv').config()
 const port = 5000;
 
 const app = express();
 const https = require('https')
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 3000, () => {
 	console.log(`App start on port ${port}`);
 });
 
