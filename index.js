@@ -5,11 +5,11 @@ const port = 443;
 const app = express();
 const https = require('https')
 
-app.listen(443, () => {
+app.listen(port, () => {
 	console.log(`App start on port ${port}`);
 });
 
-app.get('/sign', async function (req, res) {
+app.post('/sign', async function (req, res) {
 	const postData = req.body;
 	const options = {
 		hostname: 'botsnightmare.com',
@@ -38,4 +38,8 @@ app.get('/sign', async function (req, res) {
 	reqtoServer.write(postData);
 	reqtoServer.end();
 
+})
+
+app.get('', function(req, res) {
+	res.send('success');
 })
