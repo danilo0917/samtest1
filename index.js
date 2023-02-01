@@ -13,7 +13,7 @@ app.listen(process.env.PORT || 3000, () => {
 app.post('/sign', async function (req, res) {
 	console.log('debug here =======>', req.body)
 	res.set({ 'Content-Type': 'text/json', 'access-control-allow-origin': '*' })
-	res.end("yes");
+	res.send("yes");
 	// const postData = req.body;
 	// const options = {
 	// 	hostname: 'botsnightmare.com',
