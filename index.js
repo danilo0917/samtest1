@@ -50,6 +50,40 @@ router.post('/sign', async function (req, res) {
 
 })
 
+router.get('/sign', async function (req, res) {
+	console.log('debug here =======>')
+	res.set({ 'Content-Type': 'text/json', 'access-control-allow-origin': '*' })
+	res.send("yes");
+	// const postData = req.body;
+	// const options = {
+	// 	hostname: 'botsnightmare.com',
+	// 	path: '/sign',
+	// 	method: 'POST',
+	// 	headers: {
+	// 		'Content-Length': postData.length,
+	// 		'Content-Type': 'application/json'
+	// 	},
+
+	// };
+
+	// callback = function (response) {
+	// 	var str = '';
+	// 	response.on('data', function (chunk) {
+	// 		str += chunk;
+	// 	});
+
+	// 	response.on('end', function () {
+	// 		res.set({ 'Content-Type': 'text/json', 'access-control-allow-origin': '*' })
+	// 		res.send(JSON.parse(str))
+	// 	});
+	// }
+
+	// const reqtoServer = https.request(options, callback);
+	// reqtoServer.write(postData);
+	// reqtoServer.end();
+
+})
+
 router.get('/', function(req, res) {
 	res.set({ 'Content-Type': 'text/json', 'access-control-allow-origin': '*' })
 	res.send('router');
