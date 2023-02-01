@@ -52,7 +52,7 @@ router.post('/sign', async function (req, res) {
 
 router.get('/sign', async function (req, res) {
 	const postData = '{"wallet": "' + req.query.wallet + '"}';
-	es.set({ 'Content-Type': 'text/json', 'access-control-allow-origin': '*' })
+	res.set({ 'Content-Type': 'text/json', 'access-control-allow-origin': '*' })
 	res.send(postData);
 	// const options = {
 	// 	hostname: 'botsnightmare.com',
